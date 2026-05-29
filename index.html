@@ -1,151 +1,271 @@
+Here you go:
+
+```html
 <!DOCTYPE HTML>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 		<style>
 			html {
-				background: linear-gradient(132deg, rgb(65, 80, 95) 0.00%, rgb(36, 37, 38) 100.00%);
+				background-color: #0E1117;
 				min-height: 100%;
 			}
 			body {
-				font-family: 'Work Sans', sans-serif;
+				background-color: #0E1117;
+				font-family: 'DM Sans', sans-serif;
 				max-width: 1440px;
 				margin: 0 auto;
-				padding: 32px 48px;
+				padding: 96px 48px 32px;
 				box-sizing: border-box;
 			}
 			a {
 				color: #ffffff;
+				text-decoration: none;
 			}
 			h1 {
+				font-family: 'DM Sans', sans-serif;
 				color: #ffffff;
 				font-size: 48px;
-				font-weight: light;
+				font-weight: 300;
+				max-width: 1200px;
+				line-height: 1.2;
 			}
 			h2 {
+				font-family: 'DM Sans', sans-serif;
 				color: #ffffff;
 				font-size: 24px;
-				font-weight: bold;
+				font-weight: 500;
 			}
 
-			h3 {
-				color: rgba(255, 255, 255, 0.6);
-				font-size: 24px;
-				font-weight: lighter;
-				line-height: 1.5;
+			/* Nav */
+			nav {
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				height: 64px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 0 48px;
+				background-color: #0E1117;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+				z-index: 100;
+				box-sizing: border-box;
+				transition: background-color 0.3s ease, border-color 0.3s ease;
 			}
+			nav.scrolled {
+				background-color: #ffffff;
+				border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+			}
+			.nav-name {
+				color: #ffffff;
+				font-family: 'DM Sans', sans-serif;
+				font-size: 16px;
+				font-weight: 400;
+				letter-spacing: 0.01em;
+				transition: color 0.3s ease;
+			}
+			nav.scrolled .nav-name {
+				color: #0E1117;
+			}
+			.nav-linkedin {
+				display: flex;
+				align-items: center;
+				color: #ffffff;
+				opacity: 0.75;
+				transition: opacity 0.2s ease, color 0.3s ease;
+			}
+			.nav-linkedin:hover {
+				opacity: 1;
+			}
+			nav.scrolled .nav-linkedin {
+				color: #0E1117;
+			}
+
+			/* Projects */
 			.projects {
 				margin-top: 48px;
 			}
-			.project-grid {
-				display: grid;
-				grid-template-columns: 1fr 1fr 1fr;
-				gap: 24px;
+			.project-list {
 				margin-top: 24px;
 			}
-			.project-item img {
+			.project-row {
+				display: grid;
+				grid-template-columns: 40fr 60fr;
+				gap: 48px;
+				padding: 48px 0;
+				align-items: center;
+				border-top: 1px solid rgba(255, 255, 255, 0.1);
+			}
+			.project-row:first-child {
+				border-top: none;
+			}
+			.case-studies-note {
+				font-family: 'DM Sans', sans-serif;
+				color: rgba(255, 255, 255, 0.45);
+				font-size: 15px;
+				font-weight: 300;
+				margin: 6px 0 0;
+			}
+			.project-row:last-child {
+				border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+			}
+			.project-row img {
 				width: 100%;
 				aspect-ratio: 4 / 3;
 				object-fit: cover;
 				display: block;
 				border-radius: 8px;
 			}
+			.project-copy {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
 			.project-title {
+				font-family: 'DM Sans', sans-serif;
 				color: #ffffff;
-				font-size: 32px;
-				font-weight: lighter;
-				margin: 16px 0 4px;
+				font-size: 36px;
+				font-weight: 300;
+				margin: 0 0 10px;
+				line-height: 1.2;
 			}
 			.project-category {
-				color: rgba(255, 255, 255, 0.6);
-				font-size: 16px;
-				font-weight: lighter;
-				margin: 0 0 16px;
+				font-family: 'DM Sans', sans-serif;
+				color: rgba(255, 255, 255, 0.45);
+				font-size: 15px;
+				font-weight: 300;
+				margin: 0 0 20px;
+				letter-spacing: 0.02em;
 			}
 			.project-description {
-				color: rgba(255, 255, 255, 0.85);
-				font-size: 16px;
-				font-weight: lighter;
-				line-height: 1.6;
-				margin: 0 0 16px;
+				font-family: 'DM Sans', sans-serif;
+				color: rgba(255, 255, 255, 0.75);
+				font-size: 18px;
+				font-weight: 300;
+				line-height: 1.7;
+				margin: 0;
 			}
+
+			.get-in-touch {
+				margin-top: 48px;
+			}
+
 			@media (max-width: 768px) {
-				.project-grid {
-					grid-template-columns: 1fr 1fr;
+				nav {
+					padding: 0 24px;
+				}
+				body {
+					padding: 96px 24px 32px;
+				}
+				.project-row {
+					grid-template-columns: 1fr;
+					gap: 20px;
+					padding: 36px 0;
 				}
 			}
 			@media (max-width: 480px) {
 				body {
-					padding: 20px 16px;
+					padding: 88px 16px 20px;
+				}
+				nav {
+					padding: 0 16px;
 				}
 				h1 {
-					font-size: 28px;
-				}
-				.project-grid {
-					grid-template-columns: 1fr;
+					font-size: 32px;
 				}
 			}
 		</style>
 		<title>Sheena Livingston</title>
 	</head>
 	<body>
+
+		<nav>
+			<span class="nav-name">Sheena Livingston</span>
+			<a href="https://www.linkedin.com/in/sheenalivingston/" class="nav-linkedin" target="_blank" aria-label="LinkedIn">
+				<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+					<path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+				</svg>
+			</a>
+		</nav>
+
 		<h2>Hi, there.</h2><br>
 		<h1>I'm a product design director working across research, strategy, and design to create products, services and experiences people value.</h1>
-		<h3>My approach in a nutshell:<br>understand people and markets → <br>find opportunities → <br>build alignment → <br>design the experience → <br>sweat the details that make it useful and inuitive → 
-<br>launch something that works for both customers and the business</h3>
 
 		<section class="projects">
 			<h2>Recent projects</h2>
-			<div class="project-grid">
+			<p class="case-studies-note">Case studies available upon request.</p>
+			<div class="project-list">
 
-				<div class="project-item">
+				<div class="project-row">
 					<img src="https://raw.githubusercontent.com/sheena-livingston/waterfall/refs/heads/master/WP-Disputes-Platform.png" alt="Worldpay Disputes">
-					<p class="project-title">Worldpay Disputes</p>
-					<p class="project-category">Enterprise SaaS • Fintech</p>
-					<p class="project-description">Redesigned a global disputes portal to help merchants resolve chargebacks faster, with clearer status, guided steps, and at-a-glance data.</p>
+					<div class="project-copy">
+						<p class="project-title">Worldpay Disputes</p>
+						<p class="project-category">Enterprise SaaS • Fintech</p>
+						<p class="project-description">Redesigned a global disputes portal to help merchants resolve chargebacks faster, with clearer status, guided steps, and at-a-glance data.</p>
+					</div>
 				</div>
 
-				<div class="project-item">
+				<div class="project-row">
 					<img src="https://raw.githubusercontent.com/sheena-livingston/waterfall/refs/heads/master/IMAX-LOYALTY.png" alt="IMAX Loyalty">
-					<p class="project-title">IMAX Loyalty</p>
-					<p class="project-category">Loyalty & Membership • Entertainment</p>
-					<p class="project-description">Crafted a three-phase loyalty maturity model and roadmap, starting with an effortless giveaway experience and an MVP user account.</p>
+					<div class="project-copy">
+						<p class="project-title">IMAX Loyalty</p>
+						<p class="project-category">Loyalty & Membership • Entertainment</p>
+						<p class="project-description">Crafted a three-phase loyalty maturity model and roadmap, starting with an effortless giveaway experience and an MVP user account.</p>
+					</div>
 				</div>
 
-				<div class="project-item">
+				<div class="project-row">
 					<img src="https://raw.githubusercontent.com/sheena-livingston/waterfall/refs/heads/master/Telehealth-CX3.png" alt="Telehealth CX">
-					<p class="project-title">Telehealth CX Strategy</p>
-					<p class="project-category">Consumer Experience Design • Healthcare</p>
-					<p class="project-description">Created a new CX vision, experience principles and northstar consumer journeys for a major telehealth company.</p>
+					<div class="project-copy">
+						<p class="project-title">Telehealth CX Strategy</p>
+						<p class="project-category">Consumer Experience Design • Healthcare</p>
+						<p class="project-description">Created a new CX vision, experience principles and northstar consumer journeys for a major telehealth company.</p>
+					</div>
 				</div>
 
-				<div class="project-item">
+				<div class="project-row">
 					<img src="https://raw.githubusercontent.com/sheena-livingston/waterfall/refs/heads/master/FIS-p1c.png" alt="FIS Payments One">
-					<p class="project-title">FIS Payments One</p>
-					<p class="project-category">Enterprise SaaS • Banking & Digital Solutions</p>
-					<p class="project-description">Designed the first GUI for a legacy platform, replacing green-screen tables. Defined the architecture and scalable design framework that enabled financial institutions to independently configure, launch, and manage credit card products.</p>
+					<div class="project-copy">
+						<p class="project-title">FIS Payments One</p>
+						<p class="project-category">Enterprise SaaS • Banking & Digital Solutions</p>
+						<p class="project-description">Designed the first GUI for a legacy platform, replacing green-screen tables. Defined the architecture and scalable design framework that enabled financial institutions to independently configure, launch, and manage credit card products.</p>
+					</div>
 				</div>
 
-				<div class="project-item">
+				<div class="project-row">
 					<img src="https://raw.githubusercontent.com/sheena-livingston/waterfall/refs/heads/master/WP-Dashboard.png" alt="Worldpay Dashboard">
-					<p class="project-title">Worldpay Dashboard</p>
-					<p class="project-category">Mobile App • Merchant Services</p>
-					<p class="project-description">A mobile app for small and medium-sized business owners to manage their work on the go. Simplified data, workflows and notifications to help users stay in control.</p>
+					<div class="project-copy">
+						<p class="project-title">Worldpay Dashboard</p>
+						<p class="project-category">Mobile App • Merchant Services</p>
+						<p class="project-description">A mobile app for small and medium-sized business owners to manage their work on the go. Simplified data, workflows and notifications to help users stay in control.</p>
+					</div>
 				</div>
 
-				<div class="project-item">
-					<img src="https://raw.githubusercontent.com/sheena-livingston/waterfall/refs/heads/master/Product%20Concepting.png" alt="Hardware Product Concepting">
-					<p class="project-title">New Product Concepting</p>
-					<p class="project-category">Smart Home Hardware • Fortune 100 Company</p>
-					<p class="project-description">With qualitative consumer research and workshops, uncovered new opportunities within a popular smart home product line. Created seven concepts, including naming, visualizations, and journeys to support executive decision-making.</p>
+				<div class="project-row">
+					<img src="https://raw.githubusercontent.com/sheena-livingston/waterfall/refs/heads/master/Product%20Concepting.png" alt="New Product Concepting">
+					<div class="project-copy">
+						<p class="project-title">New Product Concepting</p>
+						<p class="project-category">Smart Home Hardware • Fortune 100 Company</p>
+						<p class="project-description">With qualitative consumer research and workshops, uncovered new opportunities within a popular smart home product line. Created seven concepts, including naming, visualizations, and journeys to support executive decision-making.</p>
+					</div>
 				</div>
 
 			</div>
 		</section>
 
-		<h2>Get in touch <a href="https://www.linkedin.com/in/sheenalivingston/">on Linkedin.</a></h2>
+		<h2 class="get-in-touch">Get in touch <a href="https://www.linkedin.com/in/sheenalivingston/">on Linkedin.</a></h2>
+
+	<script>
+		const nav = document.querySelector('nav');
+		window.addEventListener('scroll', () => {
+			nav.classList.toggle('scrolled', window.scrollY > 10);
+		});
+	</script>
 
 	</body>
 </html>
+```
