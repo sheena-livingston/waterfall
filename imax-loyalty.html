@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+		<style>
+			html {
+				background-color: #0E1117;
+				min-height: 100%;
+			}
+			body {
+				background-color: #0E1117;
+				font-family: 'DM Sans', sans-serif;
+				max-width: 1440px;
+				margin: 0 auto;
+				padding: 96px 48px 64px;
+				box-sizing: border-box;
+			}
+			a {
+				color: #ffffff;
+				text-decoration: none;
+			}
+
+			/* Nav */
+			nav {
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				height: 64px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 0 48px;
+				background-color: #0E1117;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+				z-index: 100;
+				box-sizing: border-box;
+			}
+			.nav-name {
+				color: #ffffff;
+				font-family: 'DM Sans', sans-serif;
+				font-size: 14px;
+				font-weight: 400;
+				letter-spacing: 0.01em;
+			}
+			.nav-linkedin {
+				display: flex;
+				align-items: center;
+				color: #ffffff;
+				opacity: 0.75;
+				transition: opacity 0.2s ease;
+			}
+			.nav-linkedin:hover {
+				opacity: 1;
+			}
+
+			/* Hero */
+			.project-hero {
+				margin: 0 -48px 56px;
+			}
+			.project-hero img {
+				width: 100%;
+				aspect-ratio: 16 / 9;
+				max-height: 65vh;
+				object-fit: cover;
+				display: block;
+			}
+
+			/* Project header */
+			.project-header {
+				max-width: 800px;
+				margin: 0 auto 80px;
+			}
+			.project-category {
+				color: rgba(255, 255, 255, 0.6);
+				font-size: 14px;
+				font-weight: 300;
+				letter-spacing: 0.02em;
+				margin: 0 0 16px;
+			}
+			h1 {
+				color: #ffffff;
+				font-size: 52px;
+				font-weight: 300;
+				line-height: 1.15;
+				margin: 0 0 24px;
+			}
+			.project-blurb {
+				color: rgba(255, 255, 255, 0.85);
+				font-size: 18px;
+				font-weight: 300;
+				line-height: 1.7;
+				margin: 0 0 32px;
+			}
+			.project-meta {
+				display: grid;
+				grid-template-columns: repeat(3, auto);
+				gap: 32px;
+				padding-top: 32px;
+				border-top: 1px solid rgba(255, 255, 255, 0.1);
+				width: fit-content;
+			}
+			.project-meta-item span {
+				display: block;
+				color: rgba(255, 255, 255, 0.55);
+				font-size: 14px;
+				font-weight: 500;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+				margin-bottom: 6px;
+			}
+			.project-meta-item p {
+				color: rgba(255, 255, 255, 0.8);
+				font-size: 14px;
+				font-weight: 300;
+				margin: 0;
+				line-height: 1.5;
+			}
+
+			/* Section text */
+			.section-body {
+				color: rgba(255, 255, 255, 0.85);
+				font-size: 18px;
+				font-weight: 300;
+				line-height: 1.7;
+				max-width: 800px;
+				margin: 0 auto 48px;
+			}
+
+			/* Prev / Next navigation */
+			.project-nav {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 24px;
+				border-top: 1px solid rgba(255, 255, 255, 0.1);
+				padding-top: 48px;
+				margin-top: 80px;
+			}
+			.nav-prev,
+			.nav-next {
+				display: flex;
+				align-items: center;
+				gap: 16px;
+				padding: 24px;
+				border: 1px solid rgba(255, 255, 255, 0.1);
+				border-radius: 8px;
+				color: #ffffff;
+				transition: border-color 0.2s ease;
+			}
+			.nav-prev:hover,
+			.nav-next:hover {
+				border-color: rgba(255, 255, 255, 0.35);
+			}
+			.nav-next {
+				justify-content: flex-end;
+				text-align: right;
+			}
+			.nav-thumb {
+				width: 80px;
+				height: 60px;
+				object-fit: cover;
+				border-radius: 4px;
+				flex-shrink: 0;
+			}
+			.nav-direction {
+				display: block;
+				color: rgba(255, 255, 255, 0.6);
+				font-size: 14px;
+				font-weight: 300;
+				margin-bottom: 6px;
+			}
+			.nav-title {
+				display: block;
+				color: #ffffff;
+				font-size: 18px;
+				font-weight: 400;
+			}
+			.nav-arrow {
+				color: rgba(255, 255, 255, 0.6);
+				font-size: 18px;
+				flex-shrink: 0;
+			}
+
+			@media (max-width: 768px) {
+				nav { padding: 0 24px; }
+				body { padding: 96px 24px 48px; }
+				.project-hero { margin: 0 -24px 40px; }
+				.project-nav { grid-template-columns: 1fr; }
+				.project-meta { grid-template-columns: 1fr; gap: 24px; }
+				h1 { font-size: 36px; }
+			}
+			@media (max-width: 480px) {
+				nav { padding: 0 16px; }
+				body { padding: 88px 16px 32px; }
+				.project-hero { margin: 0 -16px 32px; }
+				h1 { font-size: 28px; }
+				.nav-thumb { display: none; }
+			}
+		</style>
+		<title>IMAX Loyalty — Sheena Livingston</title>
+	</head>
+	<body>
+
+		<nav>
+			<a href="../index.html" class="nav-name">Sheena Livingston</a>
+			<a href="https://www.linkedin.com/in/sheenalivingston/" class="nav-linkedin" target="_blank" aria-label="LinkedIn">
+				<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+					<path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+				</svg>
+			</a>
+		</nav>
+
+		<div class="project-hero">
+			<img src="../images/IMAX-LOYALTY.png" alt="IMAX Loyalty">
+		</div>
+
+		<div class="project-header">
+			<p class="project-category">Loyalty & Membership • Entertainment</p>
+			<h1>IMAX Loyalty</h1>
+			<p class="project-blurb">Crafted a three-phase loyalty maturity model and roadmap, starting with an effortless giveaway experience and an MVP user account.</p>
+		</div>
+
+		<p class="section-body">More details coming soon.</p>
+
+		<div class="project-nav">
+
+			<a href="worldpay-disputes.html" class="nav-prev">
+				<span class="nav-arrow">←</span>
+				<img class="nav-thumb" src="../images/WP-Disputes-Platform.png" alt="">
+				<div>
+					<span class="nav-direction">Previous</span>
+					<span class="nav-title">Worldpay Disputes</span>
+				</div>
+			</a>
+
+			<a href="telehealth-cx.html" class="nav-next">
+				<div>
+					<span class="nav-direction">Next</span>
+					<span class="nav-title">Telehealth CX Strategy</span>
+				</div>
+				<img class="nav-thumb" src="../images/Telehealth-CX3.png" alt="">
+				<span class="nav-arrow">→</span>
+			</a>
+
+		</div>
+
+	</body>
+</html>
