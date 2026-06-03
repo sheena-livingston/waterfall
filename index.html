@@ -51,11 +51,6 @@
 				border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 				z-index: 100;
 				box-sizing: border-box;
-				transition: background-color 0.3s ease, border-color 0.3s ease;
-			}
-			nav.scrolled {
-				background-color: #ffffff;
-				border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 			}
 			.nav-name {
 				color: #ffffff;
@@ -63,23 +58,16 @@
 				font-size: 16px;
 				font-weight: 400;
 				letter-spacing: 0.01em;
-				transition: color 0.3s ease;
-			}
-			nav.scrolled .nav-name {
-				color: #0E1117;
 			}
 			.nav-linkedin {
 				display: flex;
 				align-items: center;
 				color: #ffffff;
 				opacity: 0.75;
-				transition: opacity 0.2s ease, color 0.3s ease;
+				transition: opacity 0.2s ease;
 			}
 			.nav-linkedin:hover {
 				opacity: 1;
-			}
-			nav.scrolled .nav-linkedin {
-				color: #0E1117;
 			}
 
 			/* Projects */
@@ -89,16 +77,28 @@
 			.project-list {
 				margin-top: 24px;
 			}
+			.project-row-link {
+				display: block;
+				border-top: 1px solid rgba(255, 255, 255, 0.1);
+			}
+			.project-row-link:first-child {
+				border-top: none;
+			}
+			.project-row-link:last-child {
+				border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+			}
 			.project-row {
 				display: grid;
 				grid-template-columns: 40fr 60fr;
 				gap: 48px;
 				padding: 48px 0;
 				align-items: center;
-				border-top: 1px solid rgba(255, 255, 255, 0.1);
 			}
-			.project-row:first-child {
-				border-top: none;
+			.project-row img {
+				transition: opacity 0.2s ease;
+			}
+			.project-row-link:hover .project-row img {
+				opacity: 0.8;
 			}
 			.case-studies-note {
 				font-family: 'DM Sans', sans-serif;
@@ -106,9 +106,6 @@
 				font-size: 15px;
 				font-weight: 300;
 				margin: 6px 0 0;
-			}
-			.project-row:last-child {
-				border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 			}
 			.project-row img {
 				width: 100%;
@@ -197,70 +194,79 @@
 			<p class="case-studies-note">Case studies available upon request.</p>
 			<div class="project-list">
 
-				<div class="project-row">
-					<img src="https://raw.githubusercontent.com/sheena-livingston/waterfall/refs/heads/master/images/WP-Disputes-Platform.png" alt="Worldpay Disputes">
-					<div class="project-copy">
-						<p class="project-title">Worldpay Disputes</p>
-						<p class="project-category">Enterprise SaaS • Fintech</p>
-						<p class="project-description">Redesigned a global disputes portal to help merchants resolve chargebacks faster, with clearer status, guided steps, and at-a-glance data.</p>
+				<a href="projects/worldpay-disputes.html" class="project-row-link">
+					<div class="project-row">
+						<img src="https://raw.githubusercontent.com/sheena-livingston/waterfall/refs/heads/master/images/WP-Disputes-Platform.png" alt="Worldpay Disputes">
+						<div class="project-copy">
+							<p class="project-title">Worldpay Disputes</p>
+							<p class="project-category">Enterprise SaaS • Fintech</p>
+							<p class="project-description">Redesigned a global disputes portal to help merchants resolve chargebacks faster, with clearer status, guided steps, and at-a-glance data.</p>
+						</div>
 					</div>
-				</div>
+				</a>
 
-				<div class="project-row">
-					<img src="https://raw.githubusercontent.com/sheena-livingston/waterfall/refs/heads/master/images/IMAX-LOYALTY.png" alt="IMAX Loyalty">
-					<div class="project-copy">
-						<p class="project-title">IMAX Loyalty</p>
-						<p class="project-category">Loyalty & Membership • Entertainment</p>
-						<p class="project-description">Crafted a three-phase loyalty maturity model and roadmap, starting with an effortless giveaway experience and an MVP user account.</p>
+				<a href="projects/imax-loyalty.html" class="project-row-link">
+					<div class="project-row">
+						<img src="https://raw.githubusercontent.com/sheena-livingston/waterfall/refs/heads/master/images/IMAX-LOYALTY.png" alt="IMAX Loyalty">
+						<div class="project-copy">
+							<p class="project-title">IMAX Loyalty</p>
+							<p class="project-category">Loyalty & Membership • Entertainment</p>
+							<p class="project-description">Crafted a three-phase loyalty maturity model and roadmap, starting with an effortless giveaway experience and an MVP user account.</p>
+						</div>
 					</div>
-				</div>
+				</a>
 
-				<div class="project-row">
-					<img src="https://raw.githubusercontent.com/sheena-livingston/waterfall/refs/heads/master/images/Telehealth-CX3.png" alt="Telehealth CX">
-					<div class="project-copy">
-						<p class="project-title">Telehealth CX Strategy</p>
-						<p class="project-category">Consumer Experience Design • Healthcare</p>
-						<p class="project-description">Created a new CX vision, experience principles and northstar consumer journeys for a major telehealth company.</p>
+				<a href="projects/telehealth-cx.html" class="project-row-link">
+					<div class="project-row">
+						<img src="https://raw.githubusercontent.com/sheena-livingston/waterfall/refs/heads/master/images/Telehealth-CX3.png" alt="Telehealth CX">
+						<div class="project-copy">
+							<p class="project-title">Telehealth CX Strategy</p>
+							<p class="project-category">Consumer Experience Design • Healthcare</p>
+							<p class="project-description">Created a new CX vision, experience principles and northstar consumer journeys for a major telehealth company.</p>
+						</div>
 					</div>
-				</div>
+				</a>
 
-				<div class="project-row">
-					<img src="https://raw.githubusercontent.com/sheena-livingston/waterfall/refs/heads/master/images/FIS-p1c.png" alt="FIS Payments One">
-					<div class="project-copy">
-						<p class="project-title">FIS Payments One</p>
-						<p class="project-category">Enterprise SaaS • Banking & Digital Solutions</p>
-						<p class="project-description">Designed the first GUI for a legacy platform, replacing green-screen tables. Defined the architecture and scalable design framework that enabled financial institutions to independently configure, launch, and manage credit card products.</p>
+				<a href="projects/fis-payments-one.html" class="project-row-link">
+					<div class="project-row">
+						<img src="https://raw.githubusercontent.com/sheena-livingston/waterfall/refs/heads/master/images/FIS-p1c.png" alt="FIS Payments One">
+						<div class="project-copy">
+							<p class="project-title">FIS Payments One</p>
+							<p class="project-category">Enterprise SaaS • Banking & Digital Solutions</p>
+							<p class="project-description">Designed the first GUI for a legacy platform, replacing green-screen tables. Defined the architecture and scalable design framework that enabled financial institutions to independently configure, launch, and manage credit card products.</p>
+						</div>
 					</div>
-				</div>
+				</a>
 
-				<div class="project-row">
-					<img src="https://raw.githubusercontent.com/sheena-livingston/waterfall/refs/heads/master/images/Product-concepting.png" alt="New Product Concepting">
-					<div class="project-copy">
-						<p class="project-title">New Product Concepting</p>
-						<p class="project-category">Smart Home Hardware • Fortune 100 Company</p>
-						<p class="project-description">With qualitative consumer research and workshops, uncovered new opportunities within a popular smart home product line. Created seven concepts, including naming, visualizations, and journeys to support executive decision-making.</p>
+				<a href="projects/new-product-concepting.html" class="project-row-link">
+					<div class="project-row">
+						<img src="https://raw.githubusercontent.com/sheena-livingston/waterfall/refs/heads/master/images/Product-concepting.png" alt="New Product Concepting">
+						<div class="project-copy">
+							<p class="project-title">New Product Concepting</p>
+							<p class="project-category">Smart Home Hardware • Fortune 100 Company</p>
+							<p class="project-description">With qualitative consumer research and workshops, uncovered new opportunities within a popular smart home product line. Created seven concepts, including naming, visualizations, and journeys to support executive decision-making.</p>
+						</div>
 					</div>
-				</div>
+				</a>
 
-				<div class="project-row">
-					<img src="https://raw.githubusercontent.com/sheena-livingston/waterfall/refs/heads/master/images/WP-Dashboard.png" alt="Worldpay Dashboard">
-					<div class="project-copy">
-						<p class="project-title">Worldpay Dashboard</p>
-						<p class="project-category">Mobile App • Merchant Services</p>
-						<p class="project-description">A mobile app for small and medium-sized business owners to manage their work on the go. Simplified data, workflows and notifications to help users stay in control.</p>
+				<a href="projects/worldpay-dashboard.html" class="project-row-link">
+					<div class="project-row">
+						<img src="https://raw.githubusercontent.com/sheena-livingston/waterfall/refs/heads/master/images/WP-Dashboard.png" alt="Worldpay Dashboard">
+						<div class="project-copy">
+							<p class="project-title">Worldpay Dashboard</p>
+							<p class="project-category">Mobile App • Merchant Services</p>
+							<p class="project-description">A mobile app for small and medium-sized business owners to manage their work on the go. Simplified data, workflows and notifications to help users stay in control.</p>
+						</div>
 					</div>
-				</div>
+				</a>
 
 			</div>
 		</section>
 
-	<script>
-		const nav = document.querySelector('nav');
-		window.addEventListener('scroll', () => {
-			nav.classList.toggle('scrolled', window.scrollY > 10);
-		});
-	</script>
+		<h2 class="get-in-touch">Get in touch <a href="https://www.linkedin.com/in/sheenalivingston/">on Linkedin.</a></h2>
+
 
 	</body>
 </html>
+
 
