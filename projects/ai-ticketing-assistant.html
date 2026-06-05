@@ -65,7 +65,7 @@
 				aspect-ratio: 16 / 9;
 				max-height: 65vh;
 				object-fit: cover;
-				object-position: top;
+				object-position: bottom;
 				display: block;
 			}
 
@@ -176,16 +176,33 @@
 				line-height: 1.5;
 			}
 
-			/* Video */
-			.project-video {
-				margin: 0 0 56px;
+			/* Stats */
+			.stats-grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 24px;
+				max-width: 800px;
+				margin: 0 auto 56px;
 			}
-			.project-video video {
-				width: 50%;
-				display: block;
+			.stat-item {
+				background-color: #ffffff;
 				border-radius: 8px;
-				background: #000;
-				margin: 0 auto;
+				padding: 32px 24px;
+			}
+			.stat-number {
+				display: block;
+				color: #0E1117;
+				font-size: 52px;
+				font-weight: 300;
+				line-height: 1;
+				margin-bottom: 12px;
+			}
+			.stat-description {
+				display: block;
+				color: rgba(0, 0, 0, 0.65);
+				font-size: 14px;
+				font-weight: 300;
+				line-height: 1.5;
 			}
 
 			/* Prev / Next navigation */
@@ -259,7 +276,7 @@
 				.nav-thumb { display: none; }
 			}
 		</style>
-		<title>Worldpay Disputes — Sheena Livingston</title>
+		<title>AI Ticketing Assistant — Sheena Livingston</title>
 	</head>
 	<body>
 
@@ -274,122 +291,137 @@
 
 		<!-- Cover image -->
 		<div class="project-hero">
-			<img src="../images/001_WP-hero.png" alt="Worldpay Disputes dashboard">
+			<img src="../images/IMAX-AI-TIX-INDEX.png" alt="AI Ticketing Assistant">
 		</div>
 
 		<!-- Title, blurb, metadata -->
 		<div class="project-header">
-			<p class="project-category">Enterprise SaaS • Fintech</p>
-			<h1>Worldpay Disputes</h1>
-			<p class="project-blurb">A 12-week MVP sprint transformed fragmented chargeback tools into a single disputes platform that helps enterprise merchants prioritize, manage, and resolve cases more efficiently.</p>
+			<p class="project-category">Mobile App • Entertainment</p>
+			<h1>AI Ticketing Assistant</h1>
+			<p class="project-blurb">Led concept to MVP for an AI-powered ticketing and alerts experience. Working in a lean team of three, we explored how AI could help moviegoers discover showtimes, secure great seats, and stay connected to upcoming releases.</p>
 			<div class="project-meta">
 				<div class="project-meta-item">
 					<span>Role</span>
-					<p>Design Director and Product Designer</p>
+					<p>Design Director</p>
 				</div>
 				<div class="project-meta-item">
 					<span>Team</span>
-					<p>Researcher, 2 Designers, Account Lead</p>
+					<p>Tech Director, Research Director</p>
 				</div>
 				<div class="project-meta-item">
 					<span>Client</span>
-					<p>Worldpay Product Team</p>
+					<p>IMAX Digital Team</p>
 				</div>
 			</div>
 		</div>
 
-		<!-- Research Findings -->
-		<p class="section-label">Research Findings</p>
-		<h2 class="section-heading">Merchants were juggling multiple systems to track disputes, monitor deadlines, and gather supporting evidence. The result was lost context, missed opportunities, and limited visibility into case status.</h2>
+		<!-- Discovery -->
+		<p class="section-label">Discovery</p>
+		<h2 class="section-heading">IMAX wanted to use AI to create an experience purpose-built for its most passionate fans.</h2>
+
+		<p class="section-body">Research revealed a worthy problem to solve: fans planned to see IMAX films months in advance but didn't know when tickets would go on sale. They were missing out on the best seats and sometimes showtimes altogether.</p>
 
 		<div class="image-full">
-			<img src="../images/002_WPD-Research.png" alt="Research findings — user insight cards and chargeback process flow">
+			<img src="../images/001_Research_Excerpts.png" alt="Research Excerpt">
 		</div>
 
 		<!-- Concept Development -->
 		<p class="section-label">Concept Development</p>
-		<h2 class="section-heading">A key insight helped shape the product strategy: winning more disputes isn't about working every case.</h2>
-		<p class="section-body"> It's about quickly identifying which cases are worth pursuing and acting on them at scale. Early navigation concepts and wireframes brought the vision to life.</p>
-
-		<div class="image-pair">
-			<div>
-				<img src="../images/003_WPD-SiteMap.png" alt="Navigation concept and site map">
-			</div>
-			<div>
-				<img src="../images/004-WPD-Wireframe.png" alt="Splitscreen concept and information architecture wireframes">
-			</div>
-		</div>
+		<h2 class="section-heading">Collaborating with stakeholders from product, technology, and marketing, we explored a range of concepts.</h2>
 
 		<div class="image-full">
-			<img src="../images/005-WPD-concepting.png" alt="Custom filter concept">
+			<img src="../images/002_concepts.png" alt="Early Concepts">
 		</div>
+	
 
-		<!-- Design -->
-		<p class="section-label">Design</p>
-		<h2 class="section-heading">The platform was designed around action and prioritization.</h2>
-		<p class="section-body">Unified case views, bulk workflows, and automation tools helped teams move faster, reduce repetitive work, and stay on top of deadlines.</p>
+		<p class="section-body">We landed on a vision for a full-service ticketing assistant that could learn fans' preferences and help them secure the best seats with minimal effort, including purchasing tickets for them.</p>
 
 		<div class="image-full">
-			<img src="../images/006-WPD-dispute-detail.png" alt="Dispute detail view with Defend action panel">
+			<img src="../images/003_Concept-Wireframe.png" alt="Concept-Wireframe">
 		</div>
 
+
+		<!-- MVP Definition -->
+		<p class="section-label">MVP Definition</p>
+		<h2 class="section-heading">We defined an MVP to test our core ideas. The goal was to validate a broader roadmap toward increasingly automated ticket discovery and purchasing.</h2>
+
+		<p class="section-body">The MVP allowed fans to subscribe to upcoming releases and receive a personalized text the moment tickets went on sale, with direct links to recommended showtimes based on their preferred theater, time of day, and seating preferences.</p>
+
+		<!-- MVP Design -->
+		<p class="section-label">MVP Design</p>
+		<h2 class="section-heading">I designed the end-to-end experience, including signup, preference collection, confirmation flows, and personalized SMS notifications.</h2>
+	
+
+			<div class="image-full">
+			<img src="../images/004_Ticket-Flow.png" alt="MVP Flow">
+		</div>
+		
+		<p class="section-body">The goal was to make setup effortless while collecting just enough information to deliver alerts that felt genuinely useful and relevant.</p>
+		
 		<div class="image-pair">
 			<div>
-				<img src="../images/007_WPD_Progress.png" alt="Dispute progress timeline">
+				<img src="../images/005_Entry_Points.png" alt="Entry Point">
 			</div>
 			<div>
-				<img src="../images/008_WPD_Case_preview.png" alt="Case preview panel">
+				<img src="../images/006_MVP-flow.png" alt="MVP flow">
 			</div>
 		</div>
+		
 
-		<p class="section-body">We leveraged Worldpay's design system to maintain continuity across the product suite, extending it in collaboration with their UX team where needed.</p>
-
-		<div class="image-full">
-			<img src="../images/009_WPD_bulk-action.png" alt="Bulk action workflow — accept multiple disputes">
-		</div>
+		<!-- Visual Design -->
+		<p class="section-label">Visual Design</p>
+		<p class="section-body">The visual style was chosen to feel native to the IMAX brand while remaining lightweight enough to support rapid experimentation and iteration.</p>
 		<div class="image-pair">
 			<div>
-				<img src="../images/010_WPD-self-serve.png" alt="Self-serve document upload flow">
+				<img src="../images/007_Desktop-layout.png" alt="Desktop">
 			</div>
 			<div>
-				<img src="../images/011_WPD_trends.png" alt="Disputes trends chart">
+				<img src="../images/008_Dynamic-messaging.png" alt="Dynamic Messaging">
 			</div>
 		</div>
+		
 
 		<!-- Launch -->
 		<p class="section-label">Launch</p>
-		<h2 class="section-heading">Worldpay launched an MVP in late 2025.</h2>
-		<p class="section-body">Below is a video they made to mark the occasion.</p>
+		<p class="section-body">The MVP was launched to newsletter subscribers in December 2024, establishing baseline performance metrics and validating demand for personalized ticket alerts.</p>
 
-		<div class="project-video">
-			<video controls>
-				<source src="../images/480p.mp4" type="video/mp4">
-			</video>
+		<div class="stats-grid">
+			<div class="stat-item">
+				<span class="stat-number">63%</span>
+				<span class="stat-description">completed the full ticket alerts flow after clicking from email</span>
+			</div>
+			<div class="stat-item">
+				<span class="stat-number">93%</span>
+				<span class="stat-description">completed preference setup after starting</span>
+			</div>
+			<div class="stat-item">
+				<span class="stat-number">80%</span>
+				<span class="stat-description">configured ticket alert preferences</span>
+			</div>
 		</div>
 
-		<!-- Prev / Next navigation -->
+		<!-- Prev / Next project navigation -->
 		<div class="project-nav">
 
-			<a href="worldpay-dashboard.html" class="nav-prev">
+			<a href="worldpay-disputes.html" class="nav-prev">
 				<span class="nav-arrow">←</span>
-				<img class="nav-thumb" src="../images/WP-Dashboard.png" alt="">
+				<img class="nav-thumb" src="../images/WP-Disputes-Platform.png" alt="">
 				<div>
 					<span class="nav-direction">Previous</span>
-					<span class="nav-title">Worldpay Dashboard</span>
+					<span class="nav-title">Worldpay Disputes</span>
 				</div>
 			</a>
 
-			<a href="ai-ticketing-assistant.html" class="nav-next">
+			<a href="imax-loyalty.html" class="nav-next">
 				<div>
 					<span class="nav-direction">Next</span>
-					<span class="nav-title">AI Ticketing Assistant</span>
+					<span class="nav-title">IMAX Loyalty</span>
 				</div>
-				<img class="nav-thumb" src="../images/IMAX-AI-TIX-INDEX.png" alt="">
+				<img class="nav-thumb" src="../images/IMAX-LOYALTY.png" alt="">
 				<span class="nav-arrow">→</span>
 			</a>
 
 		</div>
-
 
 	</body>
 </html>
